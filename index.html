@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>EastClud | 东方社区 — Global Chinese Community</title>
+  <meta name="description" content="EastClud (东方社区) is a global Chinese community where Chinese speakers worldwide connect, share, and communicate. Join the worldwide Chinese diaspora network.">
+  <meta name="keywords" content="EastClud, 东方社区, global Chinese community, Chinese diaspora, 全球华人社区, 华人交流, ECSS, EastClud Security System">
+  <meta name="author" content="EastClud">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://eastclud.stvepx.dpdns.org">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EastClud | 东方社区 — Global Chinese Community">
+  <meta property="og:description" content="EastClud (东方社区) is a global Chinese community where Chinese speakers worldwide connect, share, and communicate. Join the worldwide Chinese diaspora network.">
+  <meta property="og:url" content="https://eastclud.stvepx.dpdns.org">
+  <meta property="og:site_name" content="EastClud | 东方社区">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EastClud | 东方社区 — Global Chinese Community">
+  <meta name="twitter:description" content="EastClud (东方社区) is a global Chinese community where Chinese speakers worldwide connect, share, and communicate.">
+
+  <!-- Alternate Language Links (SEO) -->
+  <link rel="alternate" hreflang="en" href="https://eastclud.stvepx.dpdns.org">
+  <link rel="alternate" hreflang="zh-Hans" href="https://eastclud.stvepx.dpdns.org">
+  <link rel="alternate" hreflang="zh-Hant" href="https://eastclud.stvepx.dpdns.org">
+  <link rel="alternate" hreflang="x-default" href="https://eastclud.stvepx.dpdns.org">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/png" href="https://eastclud.stvepx.dpdns.org/assets/logo.png">
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EastClud",
+    "alternateName": "东方社区",
+    "url": "https://eastclud.stvepx.dpdns.org",
+    "description": "EastClud (东方社区) is a global Chinese community where Chinese speakers worldwide connect, share, and communicate.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "StvepX@163.com",
+      "availableLanguage": ["English", "Chinese"]
+    },
+    "sameAs": [
+      "https://eastclud.stvepx.dpdns.org"
+    ]
+  }
+  </script>
+
+  <style>
+    /* CSS Reset & Variables */
+    :root {
+      --bg: #ffffff;
+      --bg2: #f0f4ff;
+      --ink: #1a1a2e;
+      --muted: #6b7280;
+      --rule: #d1d5db;
+      --accent: #1a56db;
+      --accent-dark: #1e40af;
+      --accent-light: #dbeafe;
+      --accent2: #0ea5e9;
+      --gradient: linear-gradient(135deg, #1a56db 0%, #3b82f6 50%, #0ea5e9 100%);
+      --shadow: 0 4px 24px rgba(26, 86, 219, 0.12);
+      --shadow-lg: 0 12px 48px rgba(26, 86, 219, 0.18);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --font-heading: 'Segoe UI', 'Noto Sans CJK SC', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+      --font-body: 'Segoe UI', 'Noto Sans CJK SC', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+      --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+      transition: box-shadow 0.3s;
+    }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .nav-logo .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .nav-logo .logo-sub {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: block;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Language Switcher */
+    .lang-switcher {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1px solid var(--rule);
+      border-radius: 20px;
+      background: var(--bg);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-btn .arrow { font-size: 0.65rem; transition: transform 0.2s; }
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.25s;
+      min-width: 180px;
+      overflow: hidden;
+      z-index: 1001;
+    }
+    .lang-dropdown.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .lang-dropdown button {
+      display: block;
+      width: 100%;
+      padding: 10px 18px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-align: left;
+      color: var(--ink);
+      transition: background 0.15s;
+      font-family: var(--font-body);
+    }
+    .lang-dropdown button:hover { background: var(--accent-light); color: var(--accent); }
+    .lang-dropdown button.active { background: var(--accent-light); color: var(--accent); font-weight: 600; }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--ink);
+    }
+    .mobile-menu-btn svg { width: 24px; height: 24px; }
+
+    /* Hero Section */
+    .hero {
+      padding: 140px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg2);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(26,86,219,0.06) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(14,165,233,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.75;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 28px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s;
+      font-family: var(--font-body);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--gradient);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(26,86,219,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.45); }
+    .btn-outline {
+      background: var(--bg);
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+    .btn-outline:hover { background: var(--accent-light); }
+
+    /* Section Common */
+    .section {
+      padding: 90px 24px;
+    }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .section p.lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 650px;
+      line-height: 1.75;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    .about-visual {
+      position: relative;
+      background: var(--gradient);
+      border-radius: var(--radius);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .about-visual .globe-pattern {
+      font-size: 8rem;
+      opacity: 0.15;
+      position: absolute;
+    }
+    .about-visual .about-text-overlay {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding: 24px;
+    }
+    .about-visual .about-text-overlay .big-num {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .about-visual .about-text-overlay .big-label {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+    .about-content h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .about-features {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .about-features li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .about-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent-light);
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+    }
+
+    /* Features Section */
+    .features-section {
+      background: var(--bg2);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      border: 1px solid var(--rule);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .feature-card .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+    .feature-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    /* ECSS Security Section */
+    .security-section {
+      background: var(--ink);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .security-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(14,165,233,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .security-section .section-label { color: var(--accent2); }
+    .security-section h2 { color: #fff; }
+    .security-section .lead { color: rgba(255,255,255,0.7); }
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      position: relative;
+    }
+    .security-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+    .security-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .security-card .sec-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .security-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .security-card p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    /* Join Section */
+    .join-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .join-card {
+      background: var(--bg2);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      border: 1px solid var(--rule);
+      transition: all 0.3s;
+    }
+    .join-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+    .join-card .join-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .join-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .join-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-bottom: 20px;
+    }
+    .join-card .community-url {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s;
+      word-break: break-all;
+    }
+    .join-card .community-url:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--bg2);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .contact-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      border: 1px solid var(--rule);
+      transition: all 0.3s;
+    }
+    .contact-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+    .contact-card .contact-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    .contact-card .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .contact-card .contact-value {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
+    .contact-card .contact-value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-card .contact-value a:hover { text-decoration: underline; }
+
+    /* Disclaimer */
+    .disclaimer {
+      padding: 40px 24px;
+      text-align: center;
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+    }
+    .disclaimer .disclaimer-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .disclaimer .disclaimer-inner strong {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.7);
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-logo .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--gradient);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent2); }
+    .footer-copy {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 16px;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+      .security-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .join-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--rule);
+        padding: 16px 24px;
+        gap: 12px;
+        box-shadow: var(--shadow-lg);
+      }
+      .hero { padding: 120px 20px 80px; }
+      .hero h1 { font-size: 1.8rem; }
+      .section { padding: 60px 20px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .about-visual { aspect-ratio: 16/9; }
+    }
+    @media (max-width: 380px) {
+      .nav-logo { font-size: 1rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    /* Print */
+    @media print {
+      .nav, .back-to-top, .mobile-menu-btn { display: none; }
+      .hero { padding: 40px 20px; }
+      .section { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">E</div>
+        <div>
+          EastClud
+          <span class="logo-sub" data-i18n="nav.subtitle">东方社区</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#security" data-i18n="nav.security">Security</a></li>
+        <li><a href="#join" data-i18n="nav.join">Join</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-label="Switch language">
+            <span id="currentLangLabel">English</span>
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button data-lang="en" class="active">English</button>
+            <button data-lang="zh-CN">简体中文</button>
+            <button data-lang="zh-TW">繁體中文</button>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-inner fade-in">
+      <div class="hero-badge" data-i18n="hero.badge">Global Chinese Community</div>
+      <h1>
+        <span data-i18n="hero.title1">Welcome to</span><br>
+        <span class="gradient-text">EastClud</span>
+        <span data-i18n="hero.title2"> | 东方社区</span>
+      </h1>
+      <p data-i18n="hero.desc">
+        A global community for Chinese speakers worldwide. Connect, share, and communicate with fellow Chinese diaspora members across the globe — no matter where you are.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://eastclud.stvepx.dpdns.org" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="hero.join">Join the Community</a>
+        <a href="#about" class="btn btn-outline" data-i18n="hero.learn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="about.label">About EastClud</span>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="globe-pattern">&#127758;</div>
+          <div class="about-text-overlay">
+            <div class="big-num" data-i18n="about.bigNum">EastClud</div>
+            <div class="big-label" data-i18n="about.bigLabel">东方社区</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h2 data-i18n="about.title">A Home for Chinese Worldwide</h2>
+          <p data-i18n="about.p1">
+            EastClud (东方社区) is a global Chinese community dedicated to connecting Chinese speakers across the world. Whether you are studying abroad, working overseas, or simply interested in Chinese culture, EastClud welcomes you with open arms.
+          </p>
+          <p data-i18n="about.p2">
+            Our platform provides a safe, moderated space for meaningful discussions, cultural exchange, and community building. We believe in fostering genuine connections across borders and time zones.
+          </p>
+          <ul class="about-features">
+            <li data-i18n="about.li1">Global reach — connect with Chinese speakers from every continent</li>
+            <li data-i18n="about.li2">Content moderation — a safe, respectful environment for all members</li>
+            <li data-i18n="about.li3">Cultural exchange — share traditions, language, and experiences</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features-section" id="features">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="features.label">Why EastClud</span>
+      <h2 data-i18n="features.title">Built for the Global Chinese Community</h2>
+      <p class="lead" data-i18n="features.lead">Everything you need to connect, share, and grow with fellow Chinese speakers worldwide.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#127760;</div>
+          <h3 data-i18n="features.f1.title">Worldwide Network</h3>
+          <p data-i18n="features.f1.desc">Connect with Chinese speakers from every corner of the globe — from Asia to the Americas, Europe to Oceania.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128172;</div>
+          <h3 data-i18n="features.f2.title">Rich Discussions</h3>
+          <p data-i18n="features.f2.desc">Engage in topics ranging from daily life abroad, career advice, cultural identity, to language learning and beyond.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128737;</div>
+          <h3 data-i18n="features.f3.title">Content Moderation</h3>
+          <p data-i18n="features.f3.desc">Our dedicated moderation team ensures a respectful, spam-free environment where genuine conversations thrive.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128274;</div>
+          <h3 data-i18n="features.f4.title">ECSS Protection</h3>
+          <p data-i18n="features.f4.desc">The EastClud Security System guards against malicious bots, AI crawlers, and automated scraping to protect member privacy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128101;</div>
+          <h3 data-i18n="features.f5.title">Inclusive Culture</h3>
+          <p data-i18n="features.f5.desc">All Chinese speakers are welcome — regardless of nationality, dialect, or background. Diversity is our strength.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128640;</div>
+          <h3 data-i18n="features.f6.title">Fast & Modern</h3>
+          <p data-i18n="features.f6.desc">A modern platform built for speed and reliability, accessible from anywhere in the world on any device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECSS Security Section -->
+  <section class="section security-section" id="security">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="security.label">ECSS — EastClud Security System</span>
+      <h2 data-i18n="security.title"> Security &amp; Privacy</h2>
+      <p class="lead" data-i18n="security.lead">ECSS is our proprietary security system that protects the community from automated threats while ensuring a safe experience for real members.</p>
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="sec-icon">&#129302;</div>
+          <h3 data-i18n="security.s1.title">Anti-Bot Protection</h3>
+          <p data-i18n="security.s1.desc">ECSS actively detects and blocks malicious bots, crawlers, and automated scripts attempting to access or scrape community content.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">&#128225;</div>
+          <h3 data-i18n="security.s2.title">AI Robot Defense</h3>
+          <p data-i18n="security.s2.desc">Advanced heuristics identify and prevent AI-powered robots and unauthorized data collection agents from infiltrating the community.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">&#128272;</div>
+          <h3 data-i18n="security.s3.title">Privacy First</h3>
+          <p data-i18n="security.s3.desc">Member data and conversations are protected by multiple layers of security, ensuring your privacy is never compromised.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">&#9888;&#65039;</div>
+          <h3 data-i18n="security.s4.title">Real-time Monitoring</h3>
+          <p data-i18n="security.s4.desc">24/7 threat monitoring and automatic response mechanisms keep the community safe around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Section -->
+  <section class="section" id="join">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="join.label">Join Us</span>
+      <h2 data-i18n="join.title">Become Part of EastClud Today</h2>
+      <p class="lead" data-i18n="join.lead">Joining is free and open to all Chinese speakers worldwide. Visit our community portal to get started.</p>
+      <div class="join-grid">
+        <div class="join-card">
+          <div class="join-icon">&#127758;</div>
+          <h3 data-i18n="join.c1.title">Community Portal</h3>
+          <p data-i18n="join.c1.desc">Access the full EastClud community experience — discussions, groups, events, and more.</p>
+          <a href="https://eastclud.stvepx.dpdns.org" class="community-url" target="_blank" rel="noopener">
+            eastclud.stvepx.dpdns.org
+          </a>
+        </div>
+        <div class="join-card">
+          <div class="join-icon">&#128172;</div>
+          <h3 data-i18n="join.c2.title">Get in Touch</h3>
+          <p data-i18n="join.c2.desc">Have questions or need help? Reach out to our team — we are happy to assist you.</p>
+          <a href="#contact" class="btn btn-primary" data-i18n="join.c2.btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="contact.label">Contact</span>
+      <h2 data-i18n="contact.title">Get in Touch</h2>
+      <p class="lead" data-i18n="contact.lead">Have questions about EastClud? Want to collaborate or contribute? Reach out to us.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">&#127760;</div>
+          <div class="contact-label" data-i18n="contact.c1.label">Community</div>
+          <div class="contact-value">
+            <a href="https://eastclud.stvepx.dpdns.org" target="_blank" rel="noopener">eastclud.stvepx.dpdns.org</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">&#128231;</div>
+          <div class="contact-label" data-i18n="contact.c2.label">Email</div>
+          <div class="contact-value">
+            <a href="mailto:StvepX@163.com">StvepX@163.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">&#128172;</div>
+          <div class="contact-label" data-i18n="contact.c3.label">QQ</div>
+          <div class="contact-value">2307006613</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">&#128274;</div>
+          <div class="contact-label" data-i18n="contact.c4.label">Security</div>
+          <div class="contact-value" data-i18n="contact.c4.value">ECSS Protected</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="disclaimer">
+    <div class="disclaimer-inner">
+      <p data-i18n="disclaimer.text">
+        <strong>Notice:</strong> This page is the official landing page of EastClud (东方社区), hosted on GitHub Pages. This page itself is <strong>not protected</strong> by the ECSS (EastClud Security System). The actual community platform at <strong>eastclud.stvepx.dpdns.org</strong> is fully protected by ECSS against bots and AI crawlers. Search engine crawlers are welcome to index this page for SEO purposes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-icon">E</div>
+        EastClud | 东方社区
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-i18n="footer.home">Home</a>
+        <a href="#about" data-i18n="footer.about">About</a>
+        <a href="#features" data-i18n="footer.features">Features</a>
+        <a href="#security" data-i18n="footer.security">Security</a>
+        <a href="#join" data-i18n="footer.join">Join</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
+      </div>
+      <div class="footer-copy" id="footerCopy">
+        &copy; <span id="copyrightYear">2026</span> StvepX. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#9650;</button>
+
+  <!-- i18n Dictionary & Core Logic -->
+  <script>
+  (function() {
+    // i18n Dictionary 
+    var i18n = {
+      'en': {
+        'nav.subtitle': '东方社区',
+        'nav.about': 'About',
+        'nav.features': 'Features',
+        'nav.security': 'Security',
+        'nav.join': 'Join',
+        'nav.contact': 'Contact',
+        'hero.badge': 'Global Chinese Community',
+        'hero.title1': 'Welcome to',
+        'hero.title2': ' | 东方社区',
+        'hero.desc': 'A global community for Chinese speakers worldwide. Connect, share, and communicate with fellow Chinese diaspora members across the globe — no matter where you are.',
+        'hero.join': 'Join the Community',
+        'hero.learn': 'Learn More',
+        'about.label': 'About EastClud',
+        'about.bigNum': 'EastClud',
+        'about.bigLabel': '东方社区',
+        'about.title': 'A Home for Chinese Worldwide',
+        'about.p1': 'EastClud (东方社区) is a global Chinese community dedicated to connecting Chinese speakers across the world. Whether you are studying abroad, working overseas, or simply interested in Chinese culture, EastClud welcomes you with open arms.',
+        'about.p2': 'Our platform provides a safe, moderated space for meaningful discussions, cultural exchange, and community building. We believe in fostering genuine connections across borders and time zones.',
+        'about.li1': 'Global reach — connect with Chinese speakers from every continent',
+        'about.li2': 'Content moderation — a safe, respectful environment for all members',
+        'about.li3': 'Cultural exchange — share traditions, language, and experiences',
+        'features.label': 'Why EastClud',
+        'features.title': 'Built for the Global Chinese Community',
+        'features.lead': 'Everything you need to connect, share, and grow with fellow Chinese speakers worldwide.',
+        'features.f1.title': 'Worldwide Network',
+        'features.f1.desc': 'Connect with Chinese speakers from every corner of the globe — from Asia to the Americas, Europe to Oceania.',
+        'features.f2.title': 'Rich Discussions',
+        'features.f2.desc': 'Engage in topics ranging from daily life abroad, career advice, cultural identity, to language learning and beyond.',
+        'features.f3.title': 'Content Moderation',
+        'features.f3.desc': 'Our dedicated moderation team ensures a respectful, spam-free environment where genuine conversations thrive.',
+        'features.f4.title': 'ECSS Protection',
+        'features.f4.desc': 'The EastClud Security System guards against malicious bots, AI crawlers, and automated scraping to protect member privacy.',
+        'features.f5.title': 'Inclusive Culture',
+        'features.f5.desc': 'All Chinese speakers are welcome — regardless of nationality, dialect, or background. Diversity is our strength.',
+        'features.f6.title': 'Fast & Modern',
+        'features.f6.desc': 'A modern platform built for speed and reliability, accessible from anywhere in the world on any device.',
+        'security.label': 'ECSS — EastClud Security System',
+        'security.title': ' Security & Privacy',
+        'security.lead': 'ECSS is our proprietary security system that protects the community from automated threats while ensuring a safe experience for real members.',
+        'security.s1.title': 'Anti-Bot Protection',
+        'security.s1.desc': 'ECSS actively detects and blocks malicious bots, crawlers, and automated scripts attempting to access or scrape community content.',
+        'security.s2.title': 'AI Robot Defense',
+        'security.s2.desc': 'Advanced heuristics identify and prevent AI-powered robots and unauthorized data collection agents from infiltrating the community.',
+        'security.s3.title': 'Privacy First',
+        'security.s3.desc': 'Member data and conversations are protected by multiple layers of security, ensuring your privacy is never compromised.',
+        'security.s4.title': 'Real-time Monitoring',
+        'security.s4.desc': '24/7 threat monitoring and automatic response mechanisms keep the community safe around the clock.',
+        'join.label': 'Join Us',
+        'join.title': 'Become Part of EastClud Today',
+        'join.lead': 'Joining is free and open to all Chinese speakers worldwide. Visit our community portal to get started.',
+        'join.c1.title': 'Community Portal',
+        'join.c1.desc': 'Access the full EastClud community experience — discussions, groups, events, and more.',
+        'join.c2.title': 'Get in Touch',
+        'join.c2.desc': 'Have questions or need help? Reach out to our team — we are happy to assist you.',
+        'join.c2.btn': 'Contact Us',
+        'contact.label': 'Contact',
+        'contact.title': 'Get in Touch',
+        'contact.lead': 'Have questions about EastClud? Want to collaborate or contribute? Reach out to us.',
+        'contact.c1.label': 'Community',
+        'contact.c2.label': 'Email',
+        'contact.c3.label': 'QQ',
+        'contact.c4.label': 'Security',
+        'contact.c4.value': 'ECSS Protected',
+        'disclaimer.text': '<strong>Notice:</strong> This page is the official landing page of EastClud (东方社区), hosted on GitHub Pages. This page itself is <strong>not protected</strong> by the ECSS (EastClud Security System). The actual community platform at <strong>eastclud.stvepx.dpdns.org</strong> is fully protected by ECSS against bots and AI crawlers. Search engine crawlers are welcome to index this page for SEO purposes.',
+        'footer.home': 'Home',
+        'footer.about': 'About',
+        'footer.features': 'Features',
+        'footer.security': 'Security',
+        'footer.join': 'Join',
+        'footer.contact': 'Contact'
+      },
+      'zh-CN': {
+        'nav.subtitle': '东方社区',
+        'nav.about': '关于',
+        'nav.features': '特色',
+        'nav.security': '安全',
+        'nav.join': '加入',
+        'nav.contact': '联系',
+        'hero.badge': '全球华人社区',
+        'hero.title1': '欢迎来到',
+        'hero.title2': ' | 东方社区',
+        'hero.desc': '面向全球华人的国际化社区。无论你身在何处，都可以在这里与全世界的华人同胞联系、分享与交流。',
+        'hero.join': '加入社区',
+        'hero.learn': '了解更多',
+        'about.label': '关于 EastClud',
+        'about.bigNum': 'EastClud',
+        'about.bigLabel': '东方社区',
+        'about.title': '全球华人的共同家园',
+        'about.p1': 'EastClud（东方社区）是一个致力于连接全球华人的国际化社区。无论你是在海外留学、工作，还是对中国文化感兴趣，EastClud 都热忱欢迎你的加入。',
+        'about.p2': '我们的平台提供安全、经过审核的交流空间，支持有意义的讨论、文化交流和社区建设。我们致力于促进跨越国界和时区的真诚连接。',
+        'about.li1': '全球覆盖 — 连接来自各大洲的华人同胞',
+        'about.li2': '内容审核 — 为所有成员提供安全、尊重的交流环境',
+        'about.li3': '文化交流 — 分享传统、语言和生活经验',
+        'features.label': '为什么选择 EastClud',
+        'features.title': '为全球华人社区而生',
+        'features.lead': '连接、分享、成长 — 与全球华人同胞一起，你需要的一切都在这里。',
+        'features.f1.title': '全球网络',
+        'features.f1.desc': '连接来自世界每个角落的华人 — 从亚洲到美洲、从欧洲到大洋洲。',
+        'features.f2.title': '丰富讨论',
+        'features.f2.desc': '参与各种话题讨论：海外生活、职业建议、文化认同、语言学习等等。',
+        'features.f3.title': '内容审核',
+        'features.f3.desc': '专属审核团队确保社区环境尊重、无垃圾信息，让真诚的交流蓬勃发展。',
+        'features.f4.title': 'ECSS 保护',
+        'features.f4.desc': 'EastClud 安全系统抵御恶意机器人、AI 爬虫和自动抓取，保护成员隐私。',
+        'features.f5.title': '包容文化',
+        'features.f5.desc': '欢迎所有华人 — 无论国籍、方言或背景。多元是我们的力量。',
+        'features.f6.title': '快速现代',
+        'features.f6.desc': '基于现代技术构建的平台，快速可靠，随时随地通过任何设备访问。',
+        'security.label': 'ECSS — EastClud 安全系统',
+        'security.title': '安全与隐私保护',
+        'security.lead': 'ECSS 是我们专有的安全系统，保护社区免受自动化威胁，同时为真实成员提供安全的体验。',
+        'security.s1.title': '反机器人防护',
+        'security.s1.desc': 'ECSS 主动检测并阻止恶意机器人、爬虫和自动化脚本访问或抓取社区内容。',
+        'security.s2.title': 'AI 机器人防御',
+        'security.s2.desc': '先进的启发式算法识别并阻止 AI 驱动的机器人和未授权的数据收集代理渗透社区。',
+        'security.s3.title': '隐私优先',
+        'security.s3.desc': '成员数据和对话受多层安全保护，确保你的隐私永不受到侵犯。',
+        'security.s4.title': '实时监控',
+        'security.s4.desc': '全天候威胁监控与自动响应机制，时刻守护社区安全。',
+        'join.label': '加入我们',
+        'join.title': '立即成为 EastClud 的一员',
+        'join.lead': '加入完全免费，面向全球所有华人开放。访问我们的社区门户即可开始。',
+        'join.c1.title': '社区门户',
+        'join.c1.desc': '完整体验 EastClud 社区 — 讨论、群组、活动等更多内容。',
+        'join.c2.title': '联系我们',
+        'join.c2.desc': '有问题或需要帮助？联系我们的团队 — 我们很乐意协助你。',
+        'join.c2.btn': '联系我们',
+        'contact.label': '联系方式',
+        'contact.title': '取得联系',
+        'contact.lead': '对 EastClud 有疑问？想合作或贡献？欢迎联系我们。',
+        'contact.c1.label': '社区',
+        'contact.c2.label': '邮箱',
+        'contact.c3.label': 'QQ',
+        'contact.c4.label': '安全',
+        'contact.c4.value': 'ECSS 保护中',
+        'disclaimer.text': '<strong>注意：</strong>本页面为 EastClud（东方社区）的官方落地页，托管于 GitHub Pages。本页面本身<strong>不受</strong> ECSS（EastClud 安全系统）保护。实际的社区平台 <strong>eastclud.stvepx.dpdns.org</strong> 受 ECSS 全面保护，可抵御机器人和 AI 爬虫。为 SEO 目的，欢迎搜索引擎爬虫索引本页面。',
+        'footer.home': '首页',
+        'footer.about': '关于',
+        'footer.features': '特色',
+        'footer.security': '安全',
+        'footer.join': '加入',
+        'footer.contact': '联系'
+      },
+      'zh-TW': {
+        'nav.subtitle': '東方社區',
+        'nav.about': '關於',
+        'nav.features': '特色',
+        'nav.security': '安全',
+        'nav.join': '加入',
+        'nav.contact': '聯繫',
+        'hero.badge': '全球華人社區',
+        'hero.title1': '歡迎來到',
+        'hero.title2': ' | 東方社區',
+        'hero.desc': '面向全球華人的國際化社區。無論你身在何處，都可以在這裡與全世界的華人同胞聯繫、分享與交流。',
+        'hero.join': '加入社區',
+        'hero.learn': '了解更多',
+        'about.label': '關於 EastClud',
+        'about.bigNum': 'EastClud',
+        'about.bigLabel': '東方社區',
+        'about.title': '全球華人的共同家園',
+        'about.p1': 'EastClud（東方社區）是一個致力於連接全球華人的國際化社區。無論你是在海外留學、工作，還是對中國文化感興趣，EastClud 都熱忱歡迎你的加入。',
+        'about.p2': '我們的平台提供安全、經過審核的交流空間，支持有意義的討論、文化交流和社區建設。我們致力於促進跨越國界和時區的真誠連接。',
+        'about.li1': '全球覆蓋 — 連接來自各大洲的華人同胞',
+        'about.li2': '內容審核 — 為所有成員提供安全、尊重的交流環境',
+        'about.li3': '文化交流 — 分享傳統、語言和生活經驗',
+        'features.label': '為什麼選擇 EastClud',
+        'features.title': '為全球華人社區而生',
+        'features.lead': '連接、分享、成長 — 與全球華人同胞一起，你需要的一切都在這裡。',
+        'features.f1.title': '全球網絡',
+        'features.f1.desc': '連接來自世界每個角落的華人 — 從亞洲到美洲、從歐洲到大洋洲。',
+        'features.f2.title': '豐富討論',
+        'features.f2.desc': '參與各種話題討論：海外生活、職業建議、文化認同、語言學習等等。',
+        'features.f3.title': '內容審核',
+        'features.f3.desc': '專屬審核團隊確保社區環境尊重、無垃圾訊息，讓真誠的交流蓬勃發展。',
+        'features.f4.title': 'ECSS 保護',
+        'features.f4.desc': 'EastClud 安全系統抵禦惡意機器人、AI 爬蟲和自動抓取，保護成員隱私。',
+        'features.f5.title': '包容文化',
+        'features.f5.desc': '歡迎所有華人 — 無論國籍、方言或背景。多元是我們的力量。',
+        'features.f6.title': '快速現代',
+        'features.f6.desc': '基於現代技術構建的平台，快速可靠，隨時隨地通過任何裝置訪問。',
+        'security.label': 'ECSS — EastClud 安全系統',
+        'security.title': '安全與隱私保護',
+        'security.lead': 'ECSS 是我們專有的安全系統，保護社區免受自動化威脅，同時為真實成員提供安全的體驗。',
+        'security.s1.title': '反機器人防護',
+        'security.s1.desc': 'ECSS 主動檢測並阻止惡意機器人、爬蟲和自動化腳本訪問或抓取社區內容。',
+        'security.s2.title': 'AI 機器人防禦',
+        'security.s2.desc': '先進的啟發式演算法識別並阻止 AI 驅動的機器人和未授權的數據收集代理滲透社區。',
+        'security.s3.title': '隱私優先',
+        'security.s3.desc': '成員數據和對話受多層安全保護，確保你的隱私永不受到侵犯。',
+        'security.s4.title': '即時監控',
+        'security.s4.desc': '全天候威脅監控與自動回應機制，時刻守護社區安全。',
+        'join.label': '加入我們',
+        'join.title': '立即成為 EastClud 的一員',
+        'join.lead': '加入完全免費，面向全球所有華人開放。訪問我們的社區門戶即可開始。',
+        'join.c1.title': '社區門戶',
+        'join.c1.desc': '完整體驗 EastClud 社區 — 討論、群組、活動等更多內容。',
+        'join.c2.title': '聯繫我們',
+        'join.c2.desc': '有問題或需要幫助？聯繫我們的團隊 — 我們很樂意協助你。',
+        'join.c2.btn': '聯繫我們',
+        'contact.label': '聯繫方式',
+        'contact.title': '取得聯繫',
+        'contact.lead': '對 EastClud 有疑問？想合作或貢獻？歡迎聯繫我們。',
+        'contact.c1.label': '社區',
+        'contact.c2.label': '電子郵件',
+        'contact.c3.label': 'QQ',
+        'contact.c4.label': '安全',
+        'contact.c4.value': 'ECSS 保護中',
+        'disclaimer.text': '<strong>注意：</strong>本頁面為 EastClud（東方社區）的官方登陸頁，託管於 GitHub Pages。本頁面本身<strong>不受</strong> ECSS（EastClud 安全系統）保護。實際的社群平台 <strong>eastclud.stvepx.dpdns.org</strong> 受 ECSS 全面保護，可抵禦機器人和 AI 爬蟲。為 SEO 目的，歡迎搜尋引擎爬蟲索引本頁面。',
+        'footer.home': '首頁',
+        'footer.about': '關於',
+        'footer.features': '特色',
+        'footer.security': '安全',
+        'footer.join': '加入',
+        'footer.contact': '聯繫'
+      }
+    };
+
+    // Language Detection 
+    function getBrowserLang() {
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (lang === 'zh-cn' || lang === 'zh-sg' || lang === 'zh-hans' || lang === 'zh') return 'zh-CN';
+      if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-mo' || lang === 'zh-hant') return 'zh-TW';
+      return 'en';
+    }
+
+    function getStoredLang() {
+      try { return localStorage.getItem('eastclud-lang'); } catch(e) { return null; }
+    }
+
+    function setStoredLang(lang) {
+      try { localStorage.setItem('eastclud-lang', lang); } catch(e) {}
+    }
+
+    function detectLang() {
+      return getStoredLang() || getBrowserLang();
+    }
+
+    // Apply Language 
+    var langLabels = { 'en': 'English', 'zh-CN': '简体中文', 'zh-TW': '繁體中文' };
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+      setStoredLang(lang);
+
+      // Update current language label
+      var labelEl = document.getElementById('currentLangLabel');
+      if (labelEl) labelEl.textContent = langLabels[lang];
+
+      // Update dropdown active state
+      var dropdown = document.getElementById('langDropdown');
+      var buttons = dropdown.querySelectorAll('button');
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      // Update all i18n elements
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var dict = i18n[lang];
+        if (dict && dict[key] !== undefined) {
+          // Check if it contains HTML (like disclaimer)
+          if (dict[key].indexOf('<') !== -1) {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+    }
+
+    // Fetch Copyright Year 
+    function fetchCopyrightYear() {
+      // Try multiple public time APIs
+      var apis = [
+        'https://worldtimeapi.org/api/timezone/Etc/UTC',
+        'https://timeapi.io/api/Time/current/zone?timeZone=UTC'
+      ];
+
+      function tryApi(index) {
+        if (index >= apis.length) {
+          // All APIs failed, fallback to local time
+          useLocalYear();
+          return;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', apis[index], true);
+        xhr.timeout = 5000;
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            try {
+              var data = JSON.parse(xhr.responseText);
+              var year;
+              // Parse worldtimeapi response
+              if (data.datetime) {
+                year = new Date(data.datetime).getFullYear();
+              }
+              // Parse timeapi.io response
+              else if (data.year) {
+                year = data.year;
+              }
+              if (year && year >= 2026) {
+                setCopyrightYear(year);
+                return;
+              }
+            } catch(e) {}
+          }
+          tryApi(index + 1);
+        };
+        xhr.onerror = function() { tryApi(index + 1); };
+        xhr.ontimeout = function() { tryApi(index + 1); };
+        xhr.send();
+      }
+
+      tryApi(0);
+    }
+
+    function useLocalYear() {
+      setCopyrightYear(new Date().getFullYear());
+    }
+
+    function setCopyrightYear(year) {
+      var el = document.getElementById('copyrightYear');
+      if (el) el.textContent = year;
+    }
+
+    // Event Listeners
+    function init() {
+      // Language
+      var currentLang = detectLang();
+      applyLang(currentLang);
+
+      // Language dropdown toggle
+      var langBtn = document.getElementById('langBtn');
+      var langDropdown = document.getElementById('langDropdown');
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langDropdown.classList.toggle('open');
+      });
+      document.addEventListener('click', function() {
+        langDropdown.classList.remove('open');
+      });
+
+      // Language selection
+      langDropdown.querySelectorAll('button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var lang = this.getAttribute('data-lang');
+          applyLang(lang);
+          langDropdown.classList.remove('open');
+        });
+      });
+
+      // Mobile menu
+      var mobileBtn = document.getElementById('mobileMenuBtn');
+      var navLinks = document.getElementById('navLinks');
+      mobileBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('mobile-open');
+      });
+      navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('mobile-open');
+        });
+      });
+
+      // Nav scroll effect
+      var nav = document.getElementById('nav');
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        var scrolled = window.scrollY > 60;
+        nav.classList.toggle('scrolled', scrolled);
+        backToTop.classList.toggle('show', scrolled);
+      });
+
+      // Back to top
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Copyright year
+      fetchCopyrightYear();
+      // Fallback after 3 seconds if API hasn't responded
+      setTimeout(function() {
+        var yearEl = document.getElementById('copyrightYear');
+        if (yearEl && yearEl.textContent === '2026') {
+          // Only override if still default (API hasn't responded)
+          // Actually, let's just use local as fallback after timeout
+          useLocalYear();
+        }
+      }, 3000);
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+  </script>
+
+</body>
+</html>
